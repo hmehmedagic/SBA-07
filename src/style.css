@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+
+.App {
+  background-color: #141414;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2E51A2;
+  color: white;
+  padding: 15px;
+  font-size: 2em;
+  border: solid #3B5998;
+  border-top: none;
+}
+
+.links{
+  display: flex;
+}
+
+.title{
+  font-family: 'Protest Revolution', sans-serif;
+}
+  
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.anchor {
+  text-decoration: none;
+  color: white;
+}
+
+.anchor:hover {
+  color: #2E51A2;
+}
+
+.header h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.search-box {
+  display: flex;
+  margin-left: 20px;
+}
+
+.search-box input {
+  width: 400px;
+}
+
+.container {
+  display: flex;
+  margin-left: 20px;
+}
+
+.root {
+  background-size: cover;
+  background-position: center;
+  min-width: 100%;
+  min-height: 100vh;
+  z-index: 9999;
+}
+
+.header h1,
+.text-heading {
+  color: white;
+}
+
+.character-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.anime-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.anime-card img {
+  width: 200px;
+  height: auto;
+}
+
+.anime-info{
+  width: 200px;
+}
