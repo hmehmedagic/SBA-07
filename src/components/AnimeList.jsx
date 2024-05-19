@@ -48,8 +48,13 @@ const AnimeList = ({animeList, setAnimeInfo}) => {
                       to={`/anime/${anime.attributes.slug}`} 
                       key={index}
                       onClick={() => handleAnimeClick(anime.attributes)}              
-                    >
-                      <h4>{anime.attributes.slug}</h4>
+                    >{
+                      anime.attributes.titles.en ? (
+                      <h4>{anime.attributes.titles.en}</h4>
+                      ) : (
+                        <h4>{anime.attributes.titles.en_us}</h4>
+                      )
+                    }
                     </Link>
                     <div className="overlay">
                       <div className="synopsis">

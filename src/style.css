@@ -120,7 +120,7 @@ body {
 .scroller {
   display: flex;
   overflow-x: auto;
-  scrollbar-color: transparent transparent;
+  scrollbar-color: white #141414;
   user-select: none;
   width: 100%;
   gap: 20px;
@@ -136,11 +136,7 @@ body {
   height: 100%;
   padding: 0 0 1rem 0;
   text-align: center;
-  border: solid white
-}
-
-.anime-card img {
-  pointer-events: none;
+  border: solid white;
 }
 
 .anime-info h4 {
