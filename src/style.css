@@ -178,96 +178,172 @@ body {
   margin-left: 1rem;
 }
 
+.anime-content .content .filler {
+  /* border: solid white; */
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+}
+
+.anime-content .content .filler h1 {
+  text-align: center;
+}
+
 .anime-content .content .info {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border: solid white;
+  border: groove darkgrey;
   background-color: #1B1C1C;
-  width: 60%;
-  border-radius: 10%;
+  width: 20%;
+  border-radius: 5px;
   margin-right: 1rem;
 }
 
-.anime-content .content .info .dates {
+.anime-content .content .info {
   display: flex;
   justify-content: space-around;
 }
 
-.anime-content .content .info .rankings {
-  display: flex;
-  justify-content: space-around;
+.anime-content .content .info .date{
+  margin-left: 5px;
 }
 
-.anime-content .content .info .rankings .ratings,
-.anime-content .content .info .rankings .popularity{
+.hidden-content {
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 28%;
 }
 
-.ratings-hover .hidden-text,
-.ratings-hover .hidden-break {
+.hidden-text,
+.hidden-break {
   opacity: 0;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
 }
 
-.ratings-hover:hover .hidden-text,
-.ratings-hover:hover .hidden-break {
+.anime-content .content .info .popularity {
+  display: flex;
+  position: relative;
+  margin-left: 5px;
+}
+
+.anime-content .content .info .popularity:hover .hidden-text,
+.anime-content .content .info .popularity:hover .hidden-break {
   opacity: 1;
 }
 
-.anime-content .content .info .rankings .popularity {
-  position: relative;
+.anime-content .content .info .popularity .hidden-content .hidden-text{
+  align-self: center;
+}
+.anime-content .content .info .popularity .hidden-content .hidden-break{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
-.anime-content .content .info .rankings .popularity img {
-  height: 60px;
-  width: auto;
-}
-.anime-content .content .info .rankings .popularity .popularity-text {
-  position: absolute;
-  top: 72%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-shadow: 1px 1px 2px black;
-}
-
-.anime-content .content .info .rankings .favorites {
-  position: relative;
-}
-
-.anime-content .content .info .rankings .favorites img {
-  height: 60px;
-  width: auto;
-  filter: brightness(0) saturate(100%) invert(28%) sepia(91%) saturate(1143%) hue-rotate(195deg) brightness(87%) contrast(92%);
-}
-
-.anime-content .content .info .rankings .favorites .favorites-text {
-  position: absolute;
-  top: 74%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-}
-
-.anime-content .content .info .dates .episode {
-  position: relative;
-}
-
-.anime-content .content .info .dates .episode img {
+.anime-content .content .info .popularity img {
   height: 60px;
   width: auto;
   filter: brightness(0) saturate(100%) invert(88%) sepia(84%) saturate(2156%) hue-rotate(324deg) brightness(105%) contrast(101%);
 }
 
-.anime-content .content .info .dates .episode .episode-text {
+.anime-content .content .info .popularity .popularity-text {
   position: absolute;
-  top: 85%;
-  left: 30%;
+  top: 50%;
+  left: 10%;
   transform: translate(-50%, -50%);
   text-shadow: 1px 1px 2px black;
+}
+
+.anime-content .content .info .favorites {
+  display: flex;
+  position: relative;
+  margin-left: 5px;
+}
+
+.anime-content .content .info .favorites:hover .hidden-text,
+.anime-content .content .info .favorites:hover .hidden-break {
+  opacity: 1;
+}
+
+.anime-content .content .info .favorites .hidden-content .hidden-text{
+  align-self: center;
+}
+.anime-content .content .info .favorites .hidden-content .hidden-break{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.anime-content .content .info .favorites img {
+  height: 60px;
+  width: auto;
+  filter: brightness(0) saturate(100%) invert(35%) sepia(38%) saturate(1018%) hue-rotate(176deg) brightness(93%) contrast(107%);
+}
+
+.anime-content .content .info .favorites .favorites-text {
+  position: absolute;
+  top: 60%;
+  left: 11%;
+  transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 2px black;
+}
+
+
+
+.anime-content .content .info .episode {
+  display: flex;
+  position: relative;
+  margin-left: 5px;
+}
+
+.anime-content .content .info .episode:hover .hidden-text,
+.anime-content .content .info .episode:hover .hidden-break {
+  opacity: 1;
+}
+
+.anime-content .content .info .episode .hidden-content .hidden-text{
+  align-self: center;
+}
+.anime-content .content .info .episode .hidden-content .hidden-break{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.anime-content .content .info .episode img {
+  height: 60px;
+  width: auto;
+  filter: brightness(0) saturate(100%) invert(24%) sepia(76%) saturate(2444%) hue-rotate(353deg) brightness(88%) contrast(82%);
+}
+
+.anime-content .content .info .episode .episode-text {
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 2px black;
+}
+
+.anime-content .content .info .ratings .ratings-hover:hover .hidden-text,
+.anime-content .content .info .ratings .ratings-hover:hover .hidden-break{
+  opacity: 1;
+}
+
+.anime-content .content .info .ratings .ratings-hover .hidden-text {
+  text-align: center;
+}
+
+.anime-content .content .info .ratings .ratings-hover .hidden-break {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.anime-content .content .info .ratings .ratings-hover .rating-bar {
+  transform: translateX(-4%);
 }
 
 .overlay {
