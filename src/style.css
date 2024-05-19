@@ -121,7 +121,7 @@ body {
 .scroller {
   display: flex;
   overflow-x: auto;
-  scrollbar-color: white #141414;
+  scrollbar-color: transparent transparent;
   user-select: none;
   width: 100%;
   gap: 20px;
