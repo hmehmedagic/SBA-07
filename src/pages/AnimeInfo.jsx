@@ -23,7 +23,7 @@ export default function AnimeInfo (props) {
             <h1>Title: {titles.en}</h1>
             <h3>Japanese: {titles.en_jp}</h3>
           </div>
-          <hr></hr>
+          <hr className="title-break"></hr>
           <div className="content">
             <div className="poster-container">
               <img src={posterImage.large} alt="poster image for anime" />
@@ -32,12 +32,45 @@ export default function AnimeInfo (props) {
               <div className="dates">
                 <div>Start Date: {startDate}</div>
                 <div>End Date: {endDate}</div>
-                <div>Total Episodes: {episodeCount}</div>
+                <div className="episode">
+                  <span className="ratings-hover">
+                    <span className="hidden-text">Episode Count</span>
+                    <hr className="hidden-break" />
+                    <div>
+                      <img src="https://cdn.iconscout.com/icon/free/png-256/free-clapperboard-3008612-2521290.png" alt="image of a star" className="episode-img"/>
+                      <span className="episode-text">{episodeCount}</span>
+                    </div>
+                  </span>
+                </div>
               </div>
               <div className="rankings">
-                <div>Average Rating: <RatingBar value={averageRating}/></div>
-                <div>Popularity Rank: {popularityRank}</div>
-                <div>Favorites Count: {favoritesCount}</div>
+                <div className="ratings">
+                  <span className="ratings-hover">
+                    <span className="hidden-text">Average Rating</span>
+                    <hr className="hidden-break" />
+                    <RatingBar value={averageRating} />
+                  </span>
+                </div>
+                <div className="popularity">
+                  <span className="ratings-hover">
+                    <span className="hidden-text">Popularity Rank</span>
+                    <hr className="hidden-break" />
+                    <div>
+                      <img src="https://lh4.googleusercontent.com/proxy/P4FtmzPiogHLKfc2NadrZFWtsNG1eK6CAaSiKRZs1Rd9YUJZuIFXYpnXFGDNYhLouFj7kWnKk1Zj_ekYUCb6XwiN0PfAK9gAZV-TIsMK1bwaORbiZ-ZZpO0skBKORNxojfiNG3Yc" alt="image of a star" className="popularity-img"/>
+                      <span className="popularity-text">{popularityRank}</span>
+                    </div>
+                  </span>
+                </div>
+                <div className="favorites">
+                  <span className="ratings-hover">
+                    <span className="hidden-text">Favorites Count</span>
+                    <hr className="hidden-break" />
+                    <div>
+                      <img src="https://cdn1.iconfinder.com/data/icons/hand-icon/1792/thumbs-k-up-512.png" alt="image of a thumbs-up" className="favorites-img"/>
+                      <span className="favorites-text">{favoritesCount}</span>
+                    </div>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
