@@ -105,15 +105,30 @@ body {
 }
 
 .anime_info{
-  width: 320px;
+  width: 100%;
   height: 100%;
 }
 
 .anime_row {
+  color: white;
+}
+
+.anime_row hr {
+  margin-bottom: 10px;
+}
+
+.scroller {
   display: flex;
-  justify-content: space-around;
-  margin-left: 20px;
+  overflow-x: auto;
+  scrollbar-color: transparent transparent;
+  user-select: none;
+  width: 100%;
   gap: 20px;
+}
+
+.scroller::-webkit-scrollbar {
+  height: 1px;
+  background-color: transparent;
 }
 
 .anime-card {
@@ -121,7 +136,11 @@ body {
   height: 100%;
   padding: 0 0 1rem 0;
   text-align: center;
-  box-shadow: 5px 5px 5px 5px rgba(100, 100, 100, .3);
+  border: solid white
+}
+
+.anime-card img {
+  pointer-events: none;
 }
 
 .anime-info h4 {

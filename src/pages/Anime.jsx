@@ -71,7 +71,9 @@ const Anime = ({setAnimeInfo}) => {
                 <div className="anime_info">
                 
                     <div className="anime_row">
-                            <AnimeList 
+                        <h1>Popular</h1>
+                        <hr />
+                            <AnimeList
                                 animeList={animeData}
                                 setAnimeInfo={setAnimeInfo}      
                             />
