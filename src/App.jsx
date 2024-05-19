@@ -10,14 +10,15 @@ import AnimeInfo from "./pages/AnimeInfo";
 
 export default function App () {
   const [characterInfo, setCharacterInfo] = useState(null);
+  const [animeInfo, setAnimeInfo] = useState(null);
 
   return (
     <div className="App">
       <Nav />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/anime" element={<Anime />} />
-        <Route path="/anime/:name" element={<AnimeInfo />} />
+        <Route path="/anime" element={<Anime setAnimeInfo={setAnimeInfo}/>} />
+        <Route path="/anime/:name" element={<AnimeInfo animeInfo={animeInfo}/>} />
         <Route path="/characters" element={<Characters setCharacterInfo={setCharacterInfo} />} />
         <Route path="/character/:name" element={<CharacterInfo characterInfo={characterInfo} />} />
       </Routes>

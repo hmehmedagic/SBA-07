@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import AnimeList from '../components/AnimeList';
 
-const MAL_CLIENT_ID = import.meta.env.VITE_X_MAL_CLIENT_ID;
-
-const Anime = () => {
+const Anime = ({setAnimeInfo}) => {
     const [animeData, setAnimeData] = useState(null);
     const [search, setSearch] = useState('');
-    const [isSearching, setIsSearching] = useState(false); // New state variable
 
     const getData = async (searchTerm) => {
         let searcher = searchTerm.split(' ').join('%20');
@@ -26,7 +23,8 @@ const Anime = () => {
 
     const getPaginationData = async () => {
         try {
-            const apiUrl = `https://kitsu.io/api/edge/anime?page[limit]=5&page[offset]=0`;
+            // const apiUrl = `https://kitsu.io/api/edge/anime?page[limit]=5&page[offset]=0`;
+            const apiUrl = `https://kitsu.io/api/edge/anime?sort=popularityRank&page[limit]=15&page[offset]=0`;
             const res = await fetch(apiUrl);
             if (!res.ok) {
                 throw new Error('Failed to fetch anime data');
@@ -44,10 +42,8 @@ const Anime = () => {
 
     useEffect(() => {
         if (search.trim() !== '') {
-            setIsSearching(true);
             getData(search);
         } else {
-            setIsSearching(false);
             getPaginationData();
         }
     }, [search]);
@@ -71,10 +67,14 @@ const Anime = () => {
                 </div>
             </div>
             <hr></hr>
-            <div className="anime-container">
-                <div className="dummy-anime">
-                    <div className="anime-row">
-                        <AnimeList animeList={animeData} />
+            <div className="anime_container">
+                <div className="anime_info">
+                
+                    <div className="anime_row">
+                            <AnimeList 
+                                animeList={animeData}
+                                setAnimeInfo={setAnimeInfo}      
+                            />
                     </div>
                 </div>
             </div>

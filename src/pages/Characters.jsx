@@ -38,7 +38,8 @@ export default function Characters ( {setCharacterInfo}) {
         <div className="character-col">
           <h2 className="text-heading">Characters matching: {search}</h2>
           <div className="column">
-            <CharacterList characterlist={characterData} 
+            <CharacterList 
+              characterlist={characterData} 
               setCharacterInfo={setCharacterInfo}
             />
           </div>
