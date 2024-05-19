@@ -4,22 +4,22 @@ const RatingBar = ({ value }) => {
   let hashColor;
   const getColor = (value) => {
     if (value >= 0 && value < 20) {
-      hashColor = '#C23B22';
+      hashColor = '#C23B22';//red
       return 'linear-gradient(90deg, #C23B22 20%, #000000 20%)';
     } else if (value >= 20 && value < 40) {
-      hashColor = '#FF964F';
+      hashColor = '#FF964F';//orange
       return 'linear-gradient(90deg, #FF964F 40%, #000000 40%)';
     } else if (value >= 40 && value < 60) {
-      hashColor = '#FFDD3C';
+      hashColor = '#FFDD3C';//yellow
       return 'linear-gradient(90deg, #FFDD3C 60%, #000000 60%)';
     } else if (value >= 60 && value < 80) {
-      hashColor = '#538C50';
+      hashColor = '#538C50';//green
       return 'linear-gradient(90deg, #538C50 80%, #000000 80%)';
     } else if (value >= 80 && value < 90) {
-      hashColor = '#225DB4';
+      hashColor = '#225DB4';//blue
       return 'linear-gradient(90deg, #225DB4 90%, #000000 90%)';
     } else if (value >= 90 && value <= 100) {
-      hashColor = '#876F98';
+      hashColor = '#876F98';//purple
       return 'linear-gradient(90deg, #876F98 100%, #000000 100%)';
     } else {
       hashColor = '#41403D'

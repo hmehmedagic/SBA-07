@@ -232,6 +232,7 @@ body {
   top: 72%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 2px black;
 }
 
 .anime-content .content .info .rankings .favorites {
@@ -241,6 +242,7 @@ body {
 .anime-content .content .info .rankings .favorites img {
   height: 60px;
   width: auto;
+  filter: brightness(0) saturate(100%) invert(28%) sepia(91%) saturate(1143%) hue-rotate(195deg) brightness(87%) contrast(92%);
 }
 
 .anime-content .content .info .rankings .favorites .favorites-text {
@@ -257,6 +259,7 @@ body {
 .anime-content .content .info .dates .episode img {
   height: 60px;
   width: auto;
+  filter: brightness(0) saturate(100%) invert(88%) sepia(84%) saturate(2156%) hue-rotate(324deg) brightness(105%) contrast(101%);
 }
 
 .anime-content .content .info .dates .episode .episode-text {
@@ -264,6 +267,7 @@ body {
   top: 85%;
   left: 30%;
   transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 2px black;
 }
 
 .overlay {
