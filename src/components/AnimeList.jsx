@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 
 const AnimeList = ({ animeList, setAnimeInfo }) => {
@@ -6,6 +6,19 @@ const AnimeList = ({ animeList, setAnimeInfo }) => {
   const [isMouseDown, setIsMouseDown] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+
+  // useEffect(() => {
+  //   const handleWheel = (e) => {
+  //     if (animeRef.current.contains(e.target)) {
+  //       e.preventDefault();
+  //       animeRef.current.scrollLeft += e.deltaY;
+  //     }
+  //   };
+  //   animeRef.current.addEventListener('wheel', handleWheel, { passive: false });
+  //   return () => {
+  //     animeRef.current.removeEventListener('wheel', handleWheel);
+  //   };
+  // }, []);
 
   const handleAnimeClick = (anime) => {
     setAnimeInfo(anime);
@@ -15,7 +28,7 @@ const AnimeList = ({ animeList, setAnimeInfo }) => {
     setIsMouseDown(true);
     setStartX(e.pageX - animeRef.current.offsetLeft);
     setScrollLeft(animeRef.current.scrollLeft);
-    e.preventDefault(); // Prevent default action to avoid text selection
+    e.preventDefault();
   };
 
   const handleMouseLeave = () => {

@@ -49,7 +49,7 @@ const RatingBar = ({ value }) => {
   return (
     <div className="container">
       <div className="bar" style={barStyle}>
-        <span className='bar-value' style={valueStyle}>{value}</span>
+        <span className='bar-value' style={valueStyle}>{value}%</span>
       </div>
     </div>
   );
